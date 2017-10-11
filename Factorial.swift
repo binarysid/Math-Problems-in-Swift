@@ -8,7 +8,6 @@ struct Factorial {
         var result:Int = 1
         
         for i in 0...number{
-            
             if number-i == 0 {
                 break;
             }
