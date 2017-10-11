@@ -1,6 +1,7 @@
 class OccurenceNumber{
     
     static func getOccurence(of b:Int, in a:[Int])->Int{
+        
         guard a.contains(b) else { // if the element doesn't exist in array
             return 0
         }
@@ -10,7 +11,7 @@ class OccurenceNumber{
         for i in 0..<a.count{
             if a[i] != b{ // if repeat sequence breaks then continue to the next index of the loop
                 if getCount > getPreviousCount{
-                    getPreviousCount = getCount 
+                    getPreviousCount = getCount
                 }
                 getCount = 0
                 continue
@@ -26,5 +27,5 @@ class OccurenceNumber{
         }
     }
 }
-let x = [1,1,0,0,0,0,1,0,1,1,1,1,0,1,0,1,0,0,1,1,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0]
-print(OccurenceNumber.getOccurence(of: 1, in: x))
+let inputArray = [1,1,0,0,0,0,1,0,1,1,1,1,0,1,0,1,0,0,1,1,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0]
+print(OccurenceNumber.getOccurence(of: 1, in: inputArray))
